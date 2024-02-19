@@ -1,21 +1,14 @@
 <?php
  
 get_header();
+
+?>
+<main class="main">
+    <?php
+    get_template_part('sections/begginer-v1', 'v1')?>
+
+</main>
  
-if( have_posts() ):
-    while ( have_posts() ):
-        the_post(); ?>
- 
-            <main class="main">
-                <article id="<?php echo the_ID(); ?>">
-                    <div class="container">
-                        <?php the_content();?>
-                    </div>
-                </article>
-            </main>
- 
-        <?php
-    endwhile;
-endif;
- 
+<?php
+
 get_footer();

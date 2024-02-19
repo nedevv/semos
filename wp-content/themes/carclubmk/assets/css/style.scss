@@ -1,0 +1,26 @@
+@import './globals';
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.s-beginner {
+    &_inner {
+        padding: 50px 0;
+    }
+}
+
+.c-headline {
+    text-align: center;
+}
+
+.c-cards {
+    &_inner {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 50px 0;
+    }
+}
