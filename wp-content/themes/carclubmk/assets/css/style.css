@@ -11,6 +11,9 @@
 .c-headline {
   text-align: center;
 }
+.c-headline_main {
+  color: red;
+}
 
 .c-cards_inner {
   display: flex;

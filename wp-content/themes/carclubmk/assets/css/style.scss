@@ -11,9 +11,11 @@
         padding: 50px 0;
     }
 }
-
 .c-headline {
     text-align: center;
+    &_main {
+        color: red;
+    }
 }
 
 .c-cards {
