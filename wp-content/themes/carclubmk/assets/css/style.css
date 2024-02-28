@@ -1,3 +1,18 @@
+nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .container {
   max-width: 1280px;
   width: 100%;
@@ -11,13 +26,54 @@
 .c-headline {
   text-align: center;
 }
-.c-headline_after {
-  color: red;
+.c-headline_before {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.c-headline_main {
+  font-size: 2.5em;
+  font-weight: 300;
+  margin: 1.25%;
 }
 
 .c-cards_inner {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
-  padding: 50px 0;
+  padding: 35px 0;
+}
+.c-cards_card {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 7px;
+  width: 20%;
+  padding-bottom: 2.5%;
+}
+.c-cards_card-header {
+  border-radius: 7px 7px 0px 0px;
+  height: 30px;
+  background-color: var(--color);
+}
+.c-cards_card-icon {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 5%;
+}
+.c-cards_card-icon img {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-15px);
+}
+.c-cards_card-title h2 {
+  padding: 0 5%;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.c-cards_novva {
+  padding: 0 5%;
+  line-height: 1.4em;
 }/*# sourceMappingURL=style.css.map */

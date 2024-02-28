@@ -1,21 +1,30 @@
 <?php
+get_header();
 
     $cards = array(
         array(
+            'logo' => "<img src='../../../../wp-images/audi.jpg' alt='Audi'>",
             'title' => 'Audi',
-            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'
+            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+            'color' => 'red'
         ),
         array(
+            'logo' => "<img src='../../../../wp-images/chevrolet.jpg' alt='Chevrolet'>",
             'title' => 'Chevrolet',
-            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
+            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+            'color' => 'green'
         ),
         array(
+            'logo' => "<img src='../../../../wp-images/ford.jpg' alt='Ford'>",
             'title' => 'Ford',
-            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
+            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+            'color' => 'yellow'
         ),
         array(
+            'logo' => "<img src='../../../../wp-images/golf.jpg' alt='Golf'>",
             'title' => 'Golf',
-            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
+            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+            'color' => 'blue'
         ),
 
     );
@@ -43,21 +52,23 @@
             <?php foreach( $cards as $card ):
             $title = $card['title'];
             $desc = $card['desc'];
+            $logo = $card['logo'];
+            $color = $card['color'];
             ?>
 
                 <div class="c-cards_card">
-                    <div class="c-cards_card-header">
+                    <div class="c-cards_card-header" style="--color: <?php echo $color ?>;">
 
                     </div>
                     <div class="c-cards_card-body">
                         <div class="c-cards_card-icon">
-
+                        <?php echo $logo ?>
                         </div>
                         <div class="c-cards_card-title">
-                            <?php echo $title; ?>
+                            <?php echo "<h2> $title </h2>"?>
                         </div>
                         <div class="c-cards_card-icon_desc">
-                            <?php echo $desc; ?>
+                            <?php echo "<p class='c-cards_novva'> $desc </p>";?>
                         </div>
                     </div>
                 </div>
@@ -65,5 +76,14 @@
             </div>
         </div>
 
+
+
+        <?php foreach( $cards as $card ):
+            $title = $card['title'];
+            ?>
+        <div class="c-text">
+            <?php echo $title ?>.
+        </div>
+        <?php endforeach ?>
     </div>
 </section>

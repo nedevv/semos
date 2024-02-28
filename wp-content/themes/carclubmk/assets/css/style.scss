@@ -1,4 +1,9 @@
 @import './globals';
+@import './header';
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .container {
     max-width: 1280px;
@@ -13,8 +18,15 @@
 }
 .c-headline {
     text-align: center;
-    &_after {
-        color: red;
+    &_before {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    &_main {
+        font-size: 2.5em;
+        font-weight: 300;
+        margin: 1.25%;
     }
 }
 
@@ -22,7 +34,39 @@
     &_inner {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 20px;
-        padding: 50px 0;
+        padding: 35px 0;
+    }
+    &_card {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        border-radius: 7px;
+        width: 20%;
+        padding-bottom: 2.5%;
+    }
+    &_card-header {
+        border-radius: 7px 7px 0px 0px;
+        height: 30px;
+        background-color: var(--color);
+    }
+    &_card-icon {
+        width: fit-content;
+        height: fit-content;
+        padding: 0 5%;
+    }
+    &_card-icon img {
+        border-radius: 10px;
+        width: 40px;
+        height: 40px;
+        transform: translateY(-15px);
+    }
+    &_card-title h2 {
+        padding: 0 5%;
+        font-size: 1.25em;
+        font-weight: 600;
+    }
+    &_novva {
+        padding: 0 5%;
+        line-height: 1.4em;
     }
 }
